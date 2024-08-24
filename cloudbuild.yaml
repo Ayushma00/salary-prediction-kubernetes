@@ -5,7 +5,7 @@ steps:
  # Docker push to Google Artifact Registry
   - name: 'gcr.io/cloud-builders/docker:latest'
     args: ['push',  'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict:${SHORT_SHA}']
-images: ['europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict:${SHORT_SHA}']
+images: ['europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-predict:${SHORT_SHA}']
 timeout: 3600s
 options:
   logging: CLOUD_LOGGING_ONLY
