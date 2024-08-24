@@ -1,0 +1,8 @@
+pandas==1.4.2
+scikit-learn 
+Flask==2.1.2
+flasgger==0.9.7.1
+numpy==1.26.4
+matplotlib==3.5.2
+gunicorn
+Werkzeug==2.2.2
