@@ -7,4 +7,6 @@ steps:
     args: ['push',  'europe-west1-docker.pkg.dev/$_PROJECT_ID/docker-repository/salary-predict:${SHORT_SHA}']
 images: ['europe-west1-docker.pkg.dev/$_PROJECT_ID/docker-repository/salary-predict:${SHORT_SHA}']
 timeout: 3600s
+options:
+  logging: CLOUD_LOGGING_ONLY
 
