@@ -5,7 +5,26 @@ steps:
  # Docker push to Google Artifact Registry
   - name: 'gcr.io/cloud-builders/docker:latest'
     args: ['push',  'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:${SHORT_SHA}']
+
+
+  - name: 'google/cloud-sdk:latest'
+    entrypoint: 'sh'
+    args: 
+    - -xe
+    - c
+    - |
+      gcloud deploy apply --file deploy/deploy_pipeline.yaml --region=europe-west1
+      gcloud deploy apply --file deploy/dev.yaml --region=europe-west1
+      gcloud deploy releases create 'app-release-${SHORT_SHA}' --delivery-pipeline=ml-cicd-pipeline --region=europe-west1 --skaffold-file=skaffold.yaml
+      
+  
+
+
+
 images: ['europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:${SHORT_SHA}']
+
+
+
 timeout: 3600s
 options:
   logging: CLOUD_LOGGING_ONLY

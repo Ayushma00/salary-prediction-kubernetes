@@ -43,3 +43,6 @@ Here are some screenshots to illustrate the process:
 
 3. **Artifact Registry:**
 ![alt text](assets/artifact_registry.png)
+
+4. **Versioning Image:**
+![alt text](assets/versioning_image.png)

@@ -1,0 +1,11 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: dev # its the target id from deploy_pipeline
+  annotations: {}
+  labels: {}
+description: dev cluster
+gke:
+  cluster: projects/${PROJECT_ID}/locations/europe-west1/clusters/ml-cluster
+  # internalIp: true
+  # gcloud container clusters get-credentials ml-cluster --region europe-west1 --project angelswing-research
