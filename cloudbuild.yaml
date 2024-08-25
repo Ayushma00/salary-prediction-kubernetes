@@ -11,7 +11,7 @@ steps:
     entrypoint: 'sh'
     args: 
     - -xe
-    - c
+    - -c
     - |
       gcloud deploy apply --file deploy/deploy_pipeline.yaml --region=europe-west1
       gcloud deploy apply --file deploy/dev.yaml --region=europe-west1
