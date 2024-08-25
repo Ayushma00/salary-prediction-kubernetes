@@ -16,6 +16,9 @@ spec:
       - name: myapp
         image: europe-west1-docker.pkg.dev/angelswing-research/salary-predict/salary-prediction:${SHORT_SHA}
         resources:
+          requests:
+            memory: "128Mi"  
+            cpu: "500m" 
           limits:
             memory: "256Mi"
             cpu: "1000m"
