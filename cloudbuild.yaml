@@ -1,10 +1,10 @@
 steps:
 # Docker build
   - name: 'gcr.io/cloud-builders/docker:latest'
-    args: ['build','--network=cloudbuild', '-t', 'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:${SHORT_SHA}', '.']
+    args: ['build','--network=cloudbuild', '-t', 'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:v1.0.0', '.']
  # Docker push to Google Artifact Registry
   - name: 'gcr.io/cloud-builders/docker:latest'
-    args: ['push',  'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:${SHORT_SHA}']
+    args: ['push',  'europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:v1.0.0']
 
 
   - name: 'google/cloud-sdk:latest'
@@ -21,7 +21,7 @@ steps:
 
 
 
-images: ['europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:${SHORT_SHA}']
+images: ['europe-west1-docker.pkg.dev/${PROJECT_ID}/salary-predict/salary-prediction:v1.0.0']
 
 
 

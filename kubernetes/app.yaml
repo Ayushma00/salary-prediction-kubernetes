@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: europe-west1-docker.pkg.dev/angelswing-research/salary-predict/salary-prediction:${SHORT_SHA}
+        image: europe-west1-docker.pkg.dev/angelswing-research/salary-predict/salary-prediction:v1.0.0
         resources:
           requests:
             memory: "128Mi"  
