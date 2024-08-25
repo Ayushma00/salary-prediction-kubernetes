@@ -6,6 +6,6 @@ metadata:
   labels: {}
 description: dev cluster
 gke:
-  cluster: projects/${PROJECT_ID}/locations/europe-west1/clusters/ml-cluster
+  cluster: projects/angelswing-research/locations/europe-west1/clusters/ml-cluster
   # internalIp: true
   # gcloud container clusters get-credentials ml-cluster --region europe-west1 --project angelswing-research
